@@ -1,7 +1,5 @@
-# python demo.py 年份(民國)
 import requests
 from bs4 import BeautifulSoup
-import sys
 from matplotlib import pyplot as plt
 from tkinter import *
 
@@ -9,6 +7,7 @@ window = Tk()
 window.title("Final Topic") 
 window.geometry("900x900") 
 window.config(bg="#C2C287")
+
 window.rowconfigure(0, weight=1)
 window.rowconfigure(1, weight=1)
 window.rowconfigure(2, weight=1)
@@ -17,7 +16,6 @@ window.rowconfigure(4, weight=1)
 window.rowconfigure(5, weight=1)
 window.columnconfigure(0, weight=1) 
 window.columnconfigure(1, weight=1)
-
 
 def day(y,m):
     url = "https://168.motc.gov.tw/countrydeadhurt/%E8%87%BA%E4%B8%AD%E5%B8%82?"+"y="+str(y)+"&m="+str(m)
