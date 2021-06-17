@@ -6,7 +6,7 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationTool
 from tkinter import *
 
 def day(y,m):
-    url = "https://168.motc.gov.tw/countrydeadhurt/臺中市?%22+%22y=%22+str(y)+%22&m=%22+str(m)"
+    url = "https://168.motc.gov.tw/countrydeadhurt/%E8%87%BA%E4%B8%AD%E5%B8%82?"+"y="+str(y)+"&m="+str(m)
     return url
 
 
@@ -52,9 +52,33 @@ def plot(year):
 
 window = Tk()
 window.title('Plotting in Tkinter')
+window.geometry("550x500")
+window.config(bg="#C2C287")
 
-window.geometry("500x500")
-plot_button = Button(window, text = "Plot", command = lambda:plot("105"))
-  
-plot_button.pack()
+
+btn1 = Button(window, text="100", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("100"))
+btn1.grid(row=0, column=0, sticky=EW)
+btn2 = Button(window, text="101", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("101"))
+btn2.grid(row=0, column=1, sticky=EW)
+btn3 = Button(window, text="102", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("102"))
+btn3.grid(row=0, column=2, sticky=EW)
+btn4 = Button(window, text="103", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("103"))
+btn4.grid(row=0, column=3, sticky=EW)
+btn5 = Button(window, text="104", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("104"))
+btn5.grid(row=0, column=4, sticky=EW)
+
+btn6 = Button(window, text="105", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("105"))
+btn6.grid(row=1, column=0, sticky=EW)
+btn7 = Button(window, text="106", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("106"))
+btn7.grid(row=1, column=1, sticky=EW)
+btn8 = Button(window, text="107", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("107")) 
+btn8.grid(row=1, column=2, sticky=EW)
+btn9 = Button(window, text="108", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("108"))
+btn9.grid(row=1, column=3, sticky=EW)
+btn10 = Button(window, text="109", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("109"))
+btn10.grid(row=1, column=4, sticky=EW)
+
 window.mainloop()
+
+
+
