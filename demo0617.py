@@ -52,6 +52,7 @@ def plot(year):
 
 window = Tk()
 window.title('Plotting in Tkinter')
+<<<<<<< HEAD
 window.geometry("550x500")
 window.config(bg="#C2C287")
 
@@ -78,7 +79,22 @@ btn9.grid(row=1, column=3, sticky=EW)
 btn10 = Button(window, text="109", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("109"))
 btn10.grid(row=1, column=4, sticky=EW)
 
+=======
+window.geometry("500x500")
+plot_button = Button(window, text = "Plot", command = lambda:plot("105"))
+  
+plot_button.pack()
+>>>>>>> 077e5fbbee978df63b0e3ed63f9b243ee1ebf4df
 window.mainloop()
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 077e5fbbee978df63b0e3ed63f9b243ee1ebf4df
