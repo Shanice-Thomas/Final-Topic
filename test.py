@@ -6,9 +6,8 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationTool
 from tkinter import *
 
 def day(y,m):
-    url = "https://168.motc.gov.tw/countrydeadhurt/臺中市?%22+%22y=%22+str(y)+%22&m=%22+str(m)"
+    url = "https://168.motc.gov.tw/countrydeadhurt/%E8%87%BA%E4%B8%AD%E5%B8%82?"+"y="+str(y)+"&m="+str(m)
     return url
-
 
 def dead(url):
     req = requests.get(url)
@@ -52,9 +51,32 @@ def plot(year):
 
 window = Tk()
 window.title('Plotting in Tkinter')
+window.geometry("837x500")
+window.config(bg="#C2C287")
+window.resizable(0, 0)
 
-window.geometry("500x500")
-plot_button = Button(window, text = "Plot", command = lambda:plot("105"))
-  
-plot_button.pack()
+frame1 = Frame(window)
+frame1.grid(row=0, column=0)
+
+btn1 = Button(frame1, text="100", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("100"))
+btn1.pack(side='left')
+btn2 = Button(frame1, text="101", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("101"))
+btn2.pack(side='left')
+btn3 = Button(frame1, text="102", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("102"))
+btn3.pack(side='left')
+btn4 = Button(frame1, text="103", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("103"))
+btn4.pack(side='left')
+btn5 = Button(frame1, text="104", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("104"))
+btn5.pack(side='left')
+btn6 = Button(frame1, text="105", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("105"))
+btn6.pack(side='left')
+btn7 = Button(frame1, text="106", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("106"))
+btn7.pack(side='left')
+btn8 = Button(frame1, text="107", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("107")) 
+btn8.pack(side='left')
+btn9 = Button(frame1, text="108", bg="#4DFFFF", font=("Helvetica 25 bold"), command=lambda:plot("108"))
+btn9.pack(side='left')
+btn10 = Button(frame1, text="109", bg="#FFFF37", font=("Helvetica 25 bold"), command=lambda:plot("109"))
+btn10.pack(side='left')
+
 window.mainloop()
